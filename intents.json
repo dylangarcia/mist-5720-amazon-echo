@@ -1,0 +1,151 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "LIST_OF_TICKERS",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "Ethereum",
+              "synonyms": [
+                "eth",
+                "ether"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Bitcoin",
+              "synonyms": [
+                "btc"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Dash",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Ripple",
+              "synonyms": [
+                "potato"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Walton",
+              "synonyms": [
+                "wtc"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AddToPortfolioIntent",
+        "samples": [
+          "add {Number} {Ticker}",
+          "add {Number} {Ticker} to my portfolio",
+          "buy {Number} {Ticker}"
+        ],
+        "slots": [
+          {
+            "name": "Ticker",
+            "type": "LIST_OF_TICKERS"
+          },
+          {
+            "name": "Number",
+            "type": "AMAZON.NUMBER"
+          }
+        ]
+      },
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "GetPriceIntent",
+        "samples": [
+          "current price for {Ticker}",
+          "what is the current price of {Ticker}",
+          "what is the current price for {Ticker}",
+          "{Ticker} current value"
+        ],
+        "slots": [
+          {
+            "name": "Ticker",
+            "type": "LIST_OF_TICKERS"
+          }
+        ]
+      },
+      {
+        "name": "GetPriceOfPortfolioIntent",
+        "samples": [
+          "how much am I worth",
+          "how much is my portfolio",
+          "portfolio value",
+          "today's prices"
+        ],
+        "slots": []
+      },
+      {
+        "name": "GetCurrentBalanceIntent",
+        "samples": [
+          "current balance",
+          "how much money do I have",
+          "money"
+        ],
+        "slots": []
+      },
+      {
+        "name": "GetContentsOfPortfolioIntent",
+        "samples": [
+          "what coins do I have",
+          "portfolio contents",
+          "contents",
+          "diversification"
+        ],
+        "slots": []
+      },
+      {
+        "name": "RemoveFromPortfolioIntent",
+        "samples": [
+          "remove {Ticker} from my portfolio",
+          "remove {Number} {Ticker} from my portfolio",
+          "I sold {Number} {Ticker}",
+          "sell {Number} {Ticker}"
+        ],
+        "slots": [
+          {
+            "name": "Ticker",
+            "type": "LIST_OF_TICKERS"
+          },
+          {
+            "name": "Number",
+            "type": "AMAZON.NUMBER"
+          }
+        ]
+      }
+    ],
+    "invocationName": "crypto prices"
+  }
+}
